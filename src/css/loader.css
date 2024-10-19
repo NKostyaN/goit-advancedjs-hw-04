@@ -1,0 +1,36 @@
+.loader {
+  position: relative;
+  left: -50px;
+  font-size: 16px;
+  text-align: center;
+  color: #808080;
+}
+
+.loader-animation {
+  position: relative;
+  left: 50px;
+  width: 20px;
+  height: 20px;
+}
+
+.loader-animation::after,
+.loader-animation::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: #808080;
+  background: currentColor;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  box-shadow: 30px 0, -30px 0;
+  animation: move 0.4s linear infinite alternate;
+}
+
+.loader-animation::before {
+  top: 100%;
+  box-shadow: 30px 0;
+  left: -15px;
+  animation-direction: alternate-reverse;
+}

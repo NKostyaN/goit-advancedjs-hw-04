@@ -1,0 +1,10 @@
+.sl-wrapper.simple-lightbox {
+  background: #000000e6;
+}
+
+.sl-wrapper.simple-lightbox > div.sl-counter,
+.sl-wrapper.simple-lightbox > div.sl-navigation > button.sl-next,
+.sl-wrapper.simple-lightbox > div.sl-navigation > button.sl-prev,
+.sl-wrapper.simple-lightbox > button {
+  color: white;
+}
