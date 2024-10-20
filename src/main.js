@@ -59,11 +59,15 @@ async function btnOnSubmit(event) {
         return;
       }
 
-      totalPages = Math.floor(data.totalHits / data.hits.length);
+      totalPages = Math.ceil(data.totalHits / data.hits.length);
 
-      if (params.page <= totalPages) {
+      console.log(totalPages);
+
+      if (params.page < totalPages) {
         loaderHandler.setLoadMore();
         loadMoreEl.addEventListener('click', loadMoreOnClick);
+      } else {
+        loaderHandler.setFinalShow();
       }
 
       loaderHandler.setGalleryShow();
