@@ -61,8 +61,6 @@ async function btnOnSubmit(event) {
 
       totalPages = Math.ceil(data.totalHits / data.hits.length);
 
-      console.log(totalPages);
-
       if (params.page < totalPages) {
         loaderHandler.setLoadMore();
         loadMoreEl.addEventListener('click', loadMoreOnClick);
