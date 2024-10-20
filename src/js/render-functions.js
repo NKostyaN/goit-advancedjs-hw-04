@@ -45,13 +45,13 @@ const msgOptions = {
   transitionOutMobile: 'fadeOutUp',
   messageSize: '16px',
   theme: 'dark',
-  backgroundColor: '#ef4040',
   messageColor: 'white',
 };
 
 function showError(errorCode) {
   iziToast.error({
     ...msgOptions,
+    backgroundColor: '#ef4040',
     message: `Error!<br><b>${errorCode}</b><br>Please try again!`,
   });
 }
@@ -59,10 +59,20 @@ function showError(errorCode) {
 function showNotFound(query) {
   iziToast.error({
     ...msgOptions,
+    backgroundColor: '#ef4040',
     message: `Sorry, there are no images matching your <br><b>${query}</b> query.<br>Please try again!`,
   });
 }
 
+function showEmptyQuery() {
+  iziToast.info({
+    ...msgOptions,
+    backgroundColor: '#ffa000',
+    message: `Sorry, we can't search empty query.<br>Please try again!`,
+  });
+}
+
 export default createGalleryItemMarkup;
-export { showNotFound };
 export { showError };
+export { showNotFound };
+export { showEmptyQuery };

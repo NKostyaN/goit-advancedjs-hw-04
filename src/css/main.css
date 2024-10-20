@@ -82,3 +82,31 @@ button:hover {
   letter-spacing: 0.04em;
   color: #2e2f42;
 }
+
+.load-more {
+  margin: 16px auto;
+  border-radius: 8px;
+  padding: 8px 16px;
+  width: 125px;
+  height: 40px;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.end-collection {
+  padding: 16px;
+  font-size: 16px;
+  text-align: center;
+  color: #808080;
+}
