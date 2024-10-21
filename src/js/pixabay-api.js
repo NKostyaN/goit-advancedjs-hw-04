@@ -10,6 +10,9 @@ async function getPhotos({ page, perPage, query }) {
       q: query,
       page,
       per_page: perPage,
+      image_type: 'photo',
+      orientation: 'horizontal',
+      safesearch: 'true',
     },
   });
   return response.data;
